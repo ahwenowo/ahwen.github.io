@@ -1,2 +1,13 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.circle-image {
+  width: 200px;        /* control size */
+  height: 200px;       /* make it square */
+  object-fit: cover;   /* ensure it fills the circle */
+  border-radius: 50%;  /* makes it circular */
+}
+
+.post-content-center {
+  text-align: center;
+}

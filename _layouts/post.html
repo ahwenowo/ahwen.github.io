@@ -30,6 +30,14 @@ layout: base
       </div>
       {%- endif %}
     </div>
+    
+    {%- if page.tags -%}
+      {% for tag in page.tags %}
+          <a href="{{site.baseurl}}/archive#{{tag | slugize}}">
+              #{{ tag }}
+          </a>
+      {% endfor %}
+    {%- endif -%}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -45,6 +53,5 @@ layout: base
       {%- include comments.html -%}
     {% endif -%}
   {% endif -%}
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
